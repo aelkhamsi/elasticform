@@ -1,3 +1,3 @@
 export interface Test {
-	value: string;
+  value: string;
 }

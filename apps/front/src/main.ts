@@ -8,7 +8,7 @@ import { useTest } from "hooks";
 
 console.log(capitalize("achraf"));
 const test: Test = {
-        value: "achraf",
+  value: "achraf",
 };
 console.log(test);
 useTest();

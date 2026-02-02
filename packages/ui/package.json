@@ -8,7 +8,7 @@
     "build-storybook": "storybook build",
     "format": "prettier --write ./src"
   },
-  "main": "src/index.ts",
+  "main": "index.ts",
   "prettier": "tools/prettier.config.js",
   "dependencies": {
     "react": "^18.3.1",
