@@ -11,10 +11,7 @@
   },
   "prettier": "tools/prettier.config.js",
   "dependencies": {
-    "utils": "workspace:*",
-    "ui": "workspace:*",
-    "types": "workspace:*",
-    "hooks": "workspace:*"
+    "@elasticform/core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.2.2",

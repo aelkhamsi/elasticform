@@ -2,16 +2,9 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import { capitalize } from "utils";
-import { Test } from "types";
-import { useTest } from "hooks";
+import { hello } from "@elasticform/core";
 
-console.log(capitalize("achraf"));
-const test: Test = {
-  value: "achraf",
-};
-console.log(test);
-useTest();
+console.log(hello({ firstName: "Achraf" }));
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
