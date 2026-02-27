@@ -2,7 +2,7 @@ import { FormField } from "./form-field.entity";
 import { FormSubmission } from "./form-submission.entity";
 
 export interface Form {
-  id: string;
+  id: number;
 
   name: string;
 

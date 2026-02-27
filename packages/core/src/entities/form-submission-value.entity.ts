@@ -2,12 +2,12 @@ import { FormField } from "./form-field.entity";
 import { FormSubmission } from "./form-submission.entity";
 
 export interface FormSubmissionValue {
-  id: string;
+  id: number;
 
-  submissionId: string;
+  submissionId: number;
   submission?: FormSubmission;
 
-  fieldId: string;
+  fieldId: number;
   field?: FormField;
 
   value: any;

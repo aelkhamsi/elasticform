@@ -1,9 +1,8 @@
 import { Form } from "./form.entity";
-
-export type FormFieldType = "text" | "number" | "boolean" | "date" | "json";
+import { FormFieldType } from "src/enums/form-field-type.enum";
 
 export interface FormField {
-  id: string;
+  id: number;
 
   name: string;
 
@@ -15,6 +14,6 @@ export interface FormField {
 
   disabled?: boolean;
 
-  formId: string;
+  formId: number;
   form?: Form; // N->1
 }
