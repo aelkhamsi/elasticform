@@ -3,7 +3,7 @@ import { Form } from "./form.entity";
 export type FormFieldType = "text" | "number" | "boolean" | "date" | "json";
 
 export interface FormField {
-  id: number;
+  id: string;
 
   name: string;
 
@@ -15,6 +15,6 @@ export interface FormField {
 
   disabled?: boolean;
 
-  formId: number;
+  formId: string;
   form?: Form; // N->1
 }
