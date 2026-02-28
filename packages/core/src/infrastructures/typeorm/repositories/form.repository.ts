@@ -1,6 +1,6 @@
 import { DataSource, getRepository, Repository } from "typeorm";
 import { FormEntity } from "../entities/form.entity";
-import { IBaseRepository } from "src/repositories/form.repository";
+import { IBaseRepository } from "src/core/form.repository";
 
 export class FormRepository implements IBaseRepository<FormEntity, number> {
   private readonly formRepository: Repository<FormEntity>;

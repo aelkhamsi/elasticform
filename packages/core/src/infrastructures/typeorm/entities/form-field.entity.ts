@@ -5,8 +5,8 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { FormField } from "src/entities/form-field.entity";
-import { FormFieldType } from "src/enums/form-field-type.enum";
+import { FormField } from "src/core/entities/form-field.entity";
+import { FormFieldType } from "src/core/form-field-type.enum";
 import { FormEntity } from "./form.entity";
 
 @Entity("form_fields")

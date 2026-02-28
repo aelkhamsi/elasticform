@@ -1,4 +1,4 @@
-import { FormSubmissionValue as FormSubmissionValueCore } from "src/entities/form-submission-value.entity";
+import { FormSubmissionValue as FormSubmissionValueCore } from "src/core/entities/form-submission-value.entity";
 import {
   Column,
   Entity,

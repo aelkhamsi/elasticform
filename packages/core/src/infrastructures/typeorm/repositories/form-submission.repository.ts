@@ -1,4 +1,4 @@
-import { IBaseRepository } from "src/repositories/form.repository";
+import { IBaseRepository } from "src/core/form.repository";
 import { FormSubmissionEntity } from "../entities/form-submission.entity";
 import { DataSource, Repository } from "typeorm";
 

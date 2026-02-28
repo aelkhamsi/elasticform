@@ -1,5 +1,5 @@
 import { Form } from "./form.entity";
-import { FormFieldType } from "src/enums/form-field-type.enum";
+import { FormFieldType } from "src/core/form-field-type.enum";
 
 export interface FormField {
   id: number;

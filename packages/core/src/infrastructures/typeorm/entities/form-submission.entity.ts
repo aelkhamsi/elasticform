@@ -1,4 +1,4 @@
-import { FormSubmission } from "src/entities/form-submission.entity";
+import { FormSubmission } from "src/core/entities/form-submission.entity";
 import {
   Column,
   Entity,
