@@ -16,7 +16,7 @@ importers:
     dependencies:
       '@elasticform/core':
         specifier: workspace:*
-        version: link:../../packages/core
+        version: link:../../packages/elasticform-core
     devDependencies:
       prettier:
         specifier: ^3.3.3
@@ -31,8 +31,20 @@ importers:
         specifier: ^5.3.4
         version: 5.3.4(@types/node@20.14.12)(sass@1.77.8)
 
-  packages/core:
+  packages/elasticform-core:
+    devDependencies:
+      tools:
+        specifier: workspace:*
+        version: link:../tools
+      tsup:
+        specifier: ^8.5.1
+        version: 8.5.1(postcss@8.4.39)(typescript@5.5.4)
+
+  packages/elasticform-orm:
     dependencies:
+      '@elasticform/core':
+        specifier: workspace:*
+        version: link:../elasticform-core
       typeorm:
         specifier: ^0.3.28
         version: 0.3.28
@@ -357,9 +369,6 @@ packages:
   '@jridgewell/set-array@1.2.1':
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
-
-  '@jridgewell/sourcemap-codec@1.5.0':
-    resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -1478,21 +1487,19 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/set-array@1.2.1': {}
 
-  '@jridgewell/sourcemap-codec@1.5.0': {}
-
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   '@pkgjs/parseargs@0.11.0':
     optional: true

@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
-import { Form } from "src/core/entities/form.entity";
+import { Form } from "@elasticform/core";
 import { FormFieldEntity } from "./form-field.entity";
 import { FormSubmissionEntity } from "./form-submission.entity";
 

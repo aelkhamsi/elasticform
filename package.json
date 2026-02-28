@@ -5,9 +5,9 @@
   "packageManager": "pnpm@9.6.0",
   "main": "index.js",
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "format": "turbo run format --parallel",
-    "build": "turbo run build --parallel"
+    "dev": "turbo build && turbo dev --parallel",
+    "format": "turbo format --parallel",
+    "build": "turbo build --parallel"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,6 @@
 import { DataSource, Repository, getRepository } from "typeorm";
 import { FormFieldEntity } from "../entities/form-field.entity";
-import { IBaseRepository } from "src/core/form.repository";
+import { IBaseRepository } from "@elasticform/core";
 
 export class FormFieldRepository implements IBaseRepository<FormFieldEntity, number> {
   private readonly formFieldRepository: Repository<FormFieldEntity>;

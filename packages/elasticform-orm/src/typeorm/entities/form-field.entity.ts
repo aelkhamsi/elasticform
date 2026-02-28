@@ -1,6 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { FormField } from "src/core/entities/form-field.entity";
-import { FormFieldType } from "src/core/form-field-type.enum";
+import { FormField, FormFieldType } from "@elasticform/core";
 import { FormEntity } from "./form.entity";
 
 @Entity("form_fields")

@@ -1,4 +1,4 @@
-import { IFormService } from "src/core/form.service";
+import { IFormService } from "@elasticform/core";
 import { FormRepository } from "./repositories/form.repository";
 import { FormSubmissionRepository } from "./repositories/form-submission.repository";
 import { FormFieldRepository } from "./repositories/form-field.repository";

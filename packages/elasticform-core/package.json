@@ -14,9 +14,7 @@
   "author": "Achraf EL KHAMSI",
   "license": "MIT",
   "prettier": "tools/prettier.config.js",
-  "dependencies": {
-    "typeorm": "^0.3.28"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tsup": "^8.5.1",
     "tools": "workspace:*"

@@ -1,4 +1,4 @@
-import { IBaseRepository } from "src/core/form.repository";
+import { IBaseRepository } from "@elasticform/core";
 import { DataSource, Repository, getRepository } from "typeorm";
 import { FormSubmissionValueEntity } from "../entities/form-submission-value.entity";
 

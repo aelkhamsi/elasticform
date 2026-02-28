@@ -1,4 +1,4 @@
-import { FormSubmission } from "src/core/entities/form-submission.entity";
+import { FormSubmission } from "@elasticform/core";
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { FormEntity } from "./form.entity";
 import { FormSubmissionValueEntity } from "./form-submission-value.entity";

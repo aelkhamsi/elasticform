@@ -1,10 +1,10 @@
-import { FormSubmissionValue as FormSubmissionValueCore } from "src/core/entities/form-submission-value.entity";
+import { FormSubmissionValue } from "@elasticform/core";
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { FormSubmissionEntity } from "./form-submission.entity";
 import { FormFieldEntity } from "./form-field.entity";
 
 @Entity("form_submission_values")
-export class FormSubmissionValueEntity implements FormSubmissionValueCore {
+export class FormSubmissionValueEntity implements FormSubmissionValue {
   @PrimaryGeneratedColumn()
   id!: number;
 
