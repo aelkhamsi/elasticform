@@ -37,6 +37,9 @@ importers:
         specifier: ^0.3.28
         version: 0.3.28
     devDependencies:
+      tools:
+        specifier: workspace:*
+        version: link:../tools
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(postcss@8.4.39)(typescript@5.5.4)

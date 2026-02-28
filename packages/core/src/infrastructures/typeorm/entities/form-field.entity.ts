@@ -1,10 +1,4 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { FormField } from "src/core/entities/form-field.entity";
 import { FormFieldType } from "src/core/form-field-type.enum";
 import { FormEntity } from "./form.entity";

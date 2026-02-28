@@ -2,9 +2,7 @@ import { DataSource, Repository, getRepository } from "typeorm";
 import { FormFieldEntity } from "../entities/form-field.entity";
 import { IBaseRepository } from "src/core/form.repository";
 
-export class FormFieldRepository
-  implements IBaseRepository<FormFieldEntity, number>
-{
+export class FormFieldRepository implements IBaseRepository<FormFieldEntity, number> {
   private readonly formFieldRepository: Repository<FormFieldEntity>;
 
   constructor(dataSource: DataSource) {
@@ -24,10 +22,7 @@ export class FormFieldRepository
     return this.formFieldRepository.save(entity);
   }
 
-  async update(
-    id: number,
-    data: Partial<FormFieldEntity>,
-  ): Promise<FormFieldEntity | null> {
+  async update(id: number, data: Partial<FormFieldEntity>): Promise<FormFieldEntity | null> {
     const existing = await this.findById(id);
     if (!existing) return null;
 

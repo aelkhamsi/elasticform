@@ -7,15 +7,18 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsup --watch",
-    "build": "tsup"
+    "build": "tsup",
+    "format": "prettier . --check --write"
   },
   "keywords": [],
   "author": "Achraf EL KHAMSI",
   "license": "MIT",
-  "devDependencies": {
-    "tsup": "^8.5.1"
-  },
+  "prettier": "tools/prettier.config.js",
   "dependencies": {
     "typeorm": "^0.3.28"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "tools": "workspace:*"
   }
 }

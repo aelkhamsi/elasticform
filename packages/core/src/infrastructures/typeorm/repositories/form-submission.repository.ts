@@ -2,14 +2,11 @@ import { IBaseRepository } from "src/core/form.repository";
 import { FormSubmissionEntity } from "../entities/form-submission.entity";
 import { DataSource, Repository } from "typeorm";
 
-export class FormSubmissionRepository
-  implements IBaseRepository<FormSubmissionEntity, number>
-{
+export class FormSubmissionRepository implements IBaseRepository<FormSubmissionEntity, number> {
   private readonly formSubmissionRepository: Repository<FormSubmissionEntity>;
 
   constructor(dataSource: DataSource) {
-    this.formSubmissionRepository =
-      dataSource.getRepository(FormSubmissionEntity);
+    this.formSubmissionRepository = dataSource.getRepository(FormSubmissionEntity);
   }
 
   findAll(): Promise<FormSubmissionEntity[]> {
@@ -30,10 +27,7 @@ export class FormSubmissionRepository
     return this.formSubmissionRepository.save(entity);
   }
 
-  async update(
-    id: number,
-    data: Partial<FormSubmissionEntity>,
-  ): Promise<FormSubmissionEntity | null> {
+  async update(id: number, data: Partial<FormSubmissionEntity>): Promise<FormSubmissionEntity | null> {
     const existing = await this.findById(id);
     if (!existing) return null;
 

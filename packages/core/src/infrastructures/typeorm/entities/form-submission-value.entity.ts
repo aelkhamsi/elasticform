@@ -1,11 +1,5 @@
 import { FormSubmissionValue as FormSubmissionValueCore } from "src/core/entities/form-submission-value.entity";
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { FormSubmissionEntity } from "./form-submission.entity";
 import { FormFieldEntity } from "./form-field.entity";
 

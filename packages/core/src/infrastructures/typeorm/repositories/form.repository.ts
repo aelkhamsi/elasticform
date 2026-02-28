@@ -18,12 +18,7 @@ export class FormRepository implements IBaseRepository<FormEntity, number> {
   findById(id: number): Promise<FormEntity | null> {
     return this.formRepository.findOne({
       where: { id },
-      relations: [
-        "fields",
-        "submissions",
-        "submissions.values",
-        "submissions.values.field",
-      ],
+      relations: ["fields", "submissions", "submissions.values", "submissions.values.field"],
     });
   }
 
@@ -32,10 +27,7 @@ export class FormRepository implements IBaseRepository<FormEntity, number> {
     return this.formRepository.save(entity);
   }
 
-  async update(
-    id: number,
-    data: Partial<FormEntity>,
-  ): Promise<FormEntity | null> {
+  async update(id: number, data: Partial<FormEntity>): Promise<FormEntity | null> {
     const existing = await this.findById(id);
     if (!existing) return null;
 
