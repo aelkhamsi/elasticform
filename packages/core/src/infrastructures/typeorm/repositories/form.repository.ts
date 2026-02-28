@@ -10,11 +10,21 @@ export class FormRepository implements IBaseRepository<FormEntity, number> {
   }
 
   findAll(): Promise<FormEntity[]> {
-    return this.formRepository.find();
+    return this.formRepository.find({
+      relations: ["fields"],
+    });
   }
 
   findById(id: number): Promise<FormEntity | null> {
-    return this.formRepository.findOneBy({ id });
+    return this.formRepository.findOne({
+      where: { id },
+      relations: [
+        "fields",
+        "submissions",
+        "submissions.values",
+        "submissions.values.field",
+      ],
+    });
   }
 
   create(data: Partial<FormEntity>) {

@@ -13,11 +13,16 @@ export class FormSubmissionRepository
   }
 
   findAll(): Promise<FormSubmissionEntity[]> {
-    return this.formSubmissionRepository.find();
+    return this.formSubmissionRepository.find({
+      relations: ["form"],
+    });
   }
 
   findById(id: number): Promise<FormSubmissionEntity | null> {
-    return this.formSubmissionRepository.findOneBy({ id });
+    return this.formSubmissionRepository.findOne({
+      where: { id },
+      relations: ["form", "values", "values.field"],
+    });
   }
 
   create(data: Partial<FormSubmissionEntity>): Promise<FormSubmissionEntity> {

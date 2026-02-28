@@ -1,6 +1,7 @@
 import { FormSubmission } from "src/entities/form-submission.entity";
 import {
   Column,
+  Entity,
   JoinColumn,
   ManyToOne,
   OneToMany,
@@ -9,6 +10,7 @@ import {
 import { FormEntity } from "./form.entity";
 import { FormSubmissionValueEntity } from "./form-submission-value.entity";
 
+@Entity("form_submissions")
 export class FormSubmissionEntity implements FormSubmission {
   @PrimaryGeneratedColumn()
   id!: number;

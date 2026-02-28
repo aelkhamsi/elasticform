@@ -1,8 +1,15 @@
-import { Column, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { FormField } from "src/entities/form-field.entity";
 import { FormFieldType } from "src/enums/form-field-type.enum";
 import { FormEntity } from "./form.entity";
 
+@Entity("form_fields")
 export class FormFieldEntity implements FormField {
   @PrimaryGeneratedColumn()
   id!: number;
