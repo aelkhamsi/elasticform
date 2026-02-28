@@ -6,7 +6,7 @@ import { Form } from "./entities/form.entity";
 export interface IFormService {
   // Forms
   getForms(): Promise<Form[]>;
-  getFormById(): Promise<Form | null>;
+  getFormById(formId: number): Promise<Form | null>;
   createForm(data: Partial<Form>): Promise<Form>;
   updateForm(formId: number, data: Partial<Form>): Promise<Form | null>;
   deleteForm(formId: number): Promise<boolean>;
@@ -17,11 +17,11 @@ export interface IFormService {
   deleteField(fieldId: number): Promise<boolean>;
 
   // Submissions
-  createSubmission(submissionId: number, data: Partial<FormSubmission>): Promise<FormSubmission>;
+  createSubmission(data: Partial<FormSubmission>): Promise<FormSubmission>;
   deleteSubmission(submissionId: number): Promise<boolean>;
 
   // Submission Values
   createSubmissionValue(data: Partial<FormSubmissionValue>): Promise<FormSubmissionValue>;
   updateSubmissionValue(valueId: number, data: Partial<FormSubmissionValue>): Promise<FormSubmissionValue | null>;
-  createSubmissionValue(valueId: number): Promise<boolean>;
+  deleteSubmissionValue(valueId: number): Promise<boolean>;
 }
