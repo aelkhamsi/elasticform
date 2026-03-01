@@ -7,14 +7,21 @@ import { FormEntity } from "./entities/form.entity";
 import { FormFieldEntity } from "./entities/form-field.entity";
 import { FormSubmissionEntity } from "./entities/form-submission.entity";
 import { FormSubmissionValueEntity } from "./entities/form-submission-value.entity";
+import { DataSource } from "typeorm";
 
 export class FormService implements IFormService {
-  constructor(
-    private readonly formRepository: FormRepository,
-    private readonly formSubmissionRepository: FormSubmissionRepository,
-    private readonly formFieldRepository: FormFieldRepository,
-    private readonly formSubmissionValueRepository: FormSubmissionValueRepository,
-  ) {}
+  private readonly formRepository: FormRepository;
+  private readonly formSubmissionRepository: FormSubmissionRepository;
+  private readonly formFieldRepository: FormFieldRepository;
+  private readonly formSubmissionValueRepository: FormSubmissionValueRepository;
+
+  constructor(dataSource: DataSource) {
+    this.formRepository = new FormRepository(dataSource);
+    this.formSubmissionRepository = new FormSubmissionRepository(dataSource);
+    this.formFieldRepository = new FormFieldRepository(dataSource);
+    this.formSubmissionValueRepository = new FormSubmissionValueRepository(dataSource);
+  }
+
   // Forms
   getForms(): Promise<FormEntity[]> {
     return this.formRepository.findAll();
