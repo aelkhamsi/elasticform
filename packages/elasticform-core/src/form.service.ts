@@ -3,25 +3,28 @@ import { FormSubmissionValue } from "./entities/form-submission-value.entity";
 import { FormSubmission } from "./entities/form-submission.entity";
 import { Form } from "./entities/form.entity";
 
-export interface IFormService {
+export abstract class IFormService {
   // Forms
-  getForms(): Promise<Form[]>;
-  getFormById(formId: number): Promise<Form | null>;
-  createForm(data: Partial<Form>): Promise<Form>;
-  updateForm(formId: number, data: Partial<Form>): Promise<Form | null>;
-  deleteForm(formId: number): Promise<boolean>;
+  abstract getForms(): Promise<Form[]>;
+  abstract getFormById(formId: number): Promise<Form | null>;
+  abstract createForm(data: Partial<Form>): Promise<Form>;
+  abstract updateForm(formId: number, data: Partial<Form>): Promise<Form | null>;
+  abstract deleteForm(formId: number): Promise<boolean>;
 
   // Fields
-  createField(data: Partial<FormField>): Promise<FormField>;
-  updateField(fieldId: number, data: Partial<FormField>): Promise<FormField | null>;
-  deleteField(fieldId: number): Promise<boolean>;
+  abstract createField(data: Partial<FormField>): Promise<FormField>;
+  abstract updateField(fieldId: number, data: Partial<FormField>): Promise<FormField | null>;
+  abstract deleteField(fieldId: number): Promise<boolean>;
 
   // Submissions
-  createSubmission(data: Partial<FormSubmission>): Promise<FormSubmission>;
-  deleteSubmission(submissionId: number): Promise<boolean>;
+  abstract createSubmission(data: Partial<FormSubmission>): Promise<FormSubmission>;
+  abstract deleteSubmission(submissionId: number): Promise<boolean>;
 
   // Submission Values
-  createSubmissionValue(data: Partial<FormSubmissionValue>): Promise<FormSubmissionValue>;
-  updateSubmissionValue(valueId: number, data: Partial<FormSubmissionValue>): Promise<FormSubmissionValue | null>;
-  deleteSubmissionValue(valueId: number): Promise<boolean>;
+  abstract createSubmissionValue(data: Partial<FormSubmissionValue>): Promise<FormSubmissionValue>;
+  abstract updateSubmissionValue(
+    valueId: number,
+    data: Partial<FormSubmissionValue>,
+  ): Promise<FormSubmissionValue | null>;
+  abstract deleteSubmissionValue(valueId: number): Promise<boolean>;
 }

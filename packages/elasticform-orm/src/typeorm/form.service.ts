@@ -9,13 +9,14 @@ import { FormSubmissionEntity } from "./entities/form-submission.entity";
 import { FormSubmissionValueEntity } from "./entities/form-submission-value.entity";
 import { DataSource } from "typeorm";
 
-export class FormService implements IFormService {
+export class FormService extends IFormService {
   private readonly formRepository: FormRepository;
   private readonly formSubmissionRepository: FormSubmissionRepository;
   private readonly formFieldRepository: FormFieldRepository;
   private readonly formSubmissionValueRepository: FormSubmissionValueRepository;
 
   constructor(dataSource: DataSource) {
+    super();
     this.formRepository = new FormRepository(dataSource);
     this.formSubmissionRepository = new FormSubmissionRepository(dataSource);
     this.formFieldRepository = new FormFieldRepository(dataSource);
